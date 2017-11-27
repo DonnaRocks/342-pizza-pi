@@ -60,8 +60,8 @@
                     <div class="form-group">
                         <select name="crust-choice" id="crust-choice" class="form-control pizza-updater">
                             <option disabled selected>Select a crust...</option>
-                            <option value="thin">Thin</option>
-                            <option value="deep">Deep Dish</option>
+                            <option value="thin">Thin - $10.00</option>
+                            <option value="deep">Deep Dish - $15.00</option>
                         </select>
                     </div>
                 </section>
@@ -88,9 +88,9 @@
                     <div class="form-group">
                         <select name="pizza-size" id="pizza-size" class="form-control pizza-updater">
                             <option disabled selected>Select a size...</option>
-                            <option value="sm">Small - $12.00</option> // integrated price with size - Small Pizza
-                            <option value="md">Medium - $14.00</option> // integrated price with size - Medium Pizza
-                            <option value="lg">Large - $18.00</option> // integrated price with size - Large Pizza
+                            <option value="sm">Small + $0.00</option> // integrated price with size - Small Pizza
+                            <option value="md">Medium + $2.00</option> // integrated price with size - Medium Pizza
+                            <option value="lg">Large + $4.00</option> // integrated price with size - Large Pizza
                         </select>
                     </div>
                 </section>
@@ -104,13 +104,13 @@
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="toppings[]" value="pepperoni" id="pepperoni"  data-pizza-field-name="toppingsMeat" class="form-check-input pizza-updater"> Pepperoni + $2.50<br>
+                            <input type="checkbox" name="toppings[]" value="pepperoni" id="pepperoni"  data-pizza-field-name="toppingsMeat" class="form-check-input pizza-updater"> Pepperoni + $1.75 <br>
                         </label>
                     </div>
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="topping[]" value="sausage" id="sausage" class="form-check-input pizza-updater"> Sausage + $2.00<br>
+                            <input type="checkbox" name="topping[]" value="sausage" id="sausage" class="form-check-input pizza-updater"> Sausage  + $1.75<br>
                         </label>
                     </div>
 
@@ -122,7 +122,13 @@
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="topping[]" value="chicken" id="chicken" class="form-check-input pizza-updater"> Chicken + $1.75<br>
+                            <input type="checkbox" name="topping[]" value="bacon" id="bacon" class="form-check-input pizza-updater"> Ham + $2.75<br>
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="chicken" id="chicken" class="form-check-input pizza-updater"> Chicken + $2.75<br>
                         </label>
                     </div>
 
@@ -135,46 +141,53 @@
 
                 <section class="col-md-4 offset-md-2 hidden toppings-container" id="toppings-other-container">
                     <h2>Choose your other toppings</h2>
+                    <h4>+$1.00 each</h4>
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="topping[]" value="peppers-banana" id="peppersbanana" class="form-check-input pizza-updater"> Banana Peppers + $1.50<br>
+                            <input type="checkbox" name="topping[]" value="peppers-banana" id="peppersbanana" class="form-check-input pizza-updater"> Banana Peppers<br>
                         </label>
                     </div>
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="topping[]" value="spinach" id="spinach" class="form-check-input pizza-updater"> Spinach + $1.95<br>
+                            <input type="checkbox" name="topping[]" value="spinach" id="spinach" class="form-check-input pizza-updater"> Spinach<br>
                         </label>
                     </div>
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="topping[]" value="olives-black" id="olivesblack" class="form-check-input pizza-updater"> Black Olives + $1.10<br>
+                            <input type="checkbox" name="topping[]" value="olives-black" id="olivesblack" class="form-check-input pizza-updater"> Black Olives<br>
                         </label>
                     </div>
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="topping[]" value="olives-green" id="olivesgreen" class="form-check-input pizza-updater"> Green Olives + $1.10<br>
+                            <input type="checkbox" name="topping[]" value="olives-green" id="olivesgreen" class="form-check-input pizza-updater"> Green Olives<br>
                         </label>
                     </div>
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="topping[]" value="mushrooms" id="mushrooms" class="form-check-input pizza-updater"> Mushrooms + $2.00<br>
+                            <input type="checkbox" name="topping[]" value="mushrooms" id="mushrooms" class="form-check-input pizza-updater"> Mushrooms<br>
                         </label>
                     </div>
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="topping[]" value="onions" id="onions" class="form-check-input pizza-updater"> Onions + $1.50<br>
+                            <input type="checkbox" name="topping[]" value="onions" id="onions" class="form-check-input pizza-updater"> Onions<br>
                         </label>
                     </div>
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="topping[]" value="peppers-green" id="peppersgreen" class="form-check-input pizza-updater"> Green Peppers + $1.75<br>
+                            <input type="checkbox" name="topping[]" value="peppers-green" id="peppersgreen" class="form-check-input pizza-updater"> Green Peppers<br>
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="peppers-green" id="peppersgreen" class="form-check-input pizza-updater"> Extra cheese<br>
                         </label>
                     </div>
 
