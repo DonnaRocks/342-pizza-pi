@@ -191,21 +191,40 @@
                         </label>
                     </div>
 
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="button" onClick="myfunction()" value="Send order">
-                            <input type="button" onClick="cost()" value="Get cost"><br><br>
-                        </label>
+                    <div class="row price-reset-section hidden">
+                        <section class="col-md-4 price-container" id="price-holder2">
+                            <h4>Cost</h4>
+                        </section>
                     </div>
-                    <div id="calcualtor-container">
-                        <input type="text" name="price" id="price-holder">
-                    </div>
+
                     <div id="total-price"></div>
 
                 </section>
 
             </div>
 
+            <div class="row">
+                <div class="col-md-4 offset-md-2 checkout-button">
+                    <button type="reset" class="reset-button" name="reset-choices">Reset Choices</button>
+                </div>
+
+                <!--div class="form-check">
+                    <label class="form-check-label">
+                        <input type="button" onClick="myfunction()" value="Send order">
+                    </label>
+                </div-->
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="button" onClick="cost()" value="Get cost"><br><br>
+                    </label>
+                </div>
+                <div id="calcualtor-container">
+                    <input type="text" name="price" id="price-holder">
+                </div>
+
+
+            </div>
 
             <hr>
 
@@ -213,114 +232,6 @@
 
     </form>
     </form>
-
-    <!--
-    <script>
-    function myFunction() {
-    var pizza = document.form[0];
-    var txt = "";
-    var i;
-    for (i = 0; i < pizza.length; i++) {
-        if (pizza[i].checked) {
-            txt = txt + pizza[i].value + " ";
-
-        }
-    }
-    document.getElementById("order").value =  "You order a pizza with: " + txt;
-    }
-
-    function cost() {
-        var s = 12.00;
-        var md = 14.00;
-        var lg = 18.00;
-        var pepperoni = 2.50;
-        var sausage = 2.00;
-        var bacon = 1.75;
-        var chicken = 1.75;
-        var meatlover = 4.50;
-        var peppersbanana = 1.50;
-        var spinach = 1.95;
-        var olivesblack = 1.10;
-        var olivesgreen = 1.10;
-        var mushrooms = 2.00;
-        var onions = 1.50;
-        var peppersgreen = 1.75;
-        var total = 0;
-        if(document.getElementById("s").checked === true) {
-            total += s;
-
-        }
-
-        if (document.getElementById("md").checked === true) {
-            total += md;
-
-        }
-
-        if (document.getElementById("lg").checked === true) {
-            total += lg;
-
-        }
-
-        if (document.getElementById("pepperoni").checked === true) {
-            total += pepperoni;
-
-        }
-
-        if (document.getElementById("sausage").checked === true) {
-            total += sausage;
-
-        }
-
-
-        if (document.getElementById("bacon").checked === true) {
-                    total += bacon;
-
-        }
-
-        if (document.getElementById("chicken").checked === true) {
-
-        }
-
-        if (document.getElementById("meatlover").checked === true) {
-
-
-        }
-
-        if (document.getElementById("peppersbanana").checked === true) {
-
-
-        }
-
-        if (document.getElementById("spinach").checked === true) {
-
-
-        }
-
-        if (document.getElementById("olivesblack").checked === true) {
-
-
-        }
-
-        if (document.getElementById ("olivesgreen").checked === true) {
-
-
-        }
-
-        if (document.getElementById("mushrooms").checked === true) {
-
-        }
-
-        if (document.getElementById("onions").checked === true) {
-
-        }
-
-        if (document.getElementById("peppersgreen").checked === true) {
-
-        }
-          document.getElementById("order").value = "The cost is : " + total;
-    }
-    </script>
--->
 </main>
 
 <footer class="container">
