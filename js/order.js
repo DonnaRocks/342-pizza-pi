@@ -106,6 +106,20 @@ function cost(){
         }
     }
 
+    if (order.toppingsMisc !== null){
+        for (let topping of order.toppingMisc()){
+            order.price += 1.00;
+        }
+    }
+
+    add(order.price)
+}
+
+function add(price){
+    $(".price-container h4").remove();
+        let $newprice = ("<h4>".text("COST: $" + price.toFixed(2)));
+    $(".price-container").append($newPrice);
+
 }
 
 // function sayHello() {
