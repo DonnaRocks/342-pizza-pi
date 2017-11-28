@@ -16,7 +16,7 @@
 $(document).ready(function($){
     let pizzaOrder = getOrder();
 
-
+    check(pizzaOrder);
 
     $("#crust-choice").on("change", function(e){
         $("#pizza-size-container").removeClass("hidden");
@@ -70,7 +70,7 @@ function cost(){
         case "deep":
             order.price += 15.00;
             break;
-    }
+    };
 
     switch (order.size){
         case "sm":
@@ -83,7 +83,7 @@ function cost(){
         case "lg":
             order.price += 4.00;
             break;
-    }
+    };
 
     if (order.toppingsMeat !== null){
         for (let topping of order.toppingsMeat){
@@ -102,33 +102,22 @@ function cost(){
                 case "sausage":
                     order.price += 1.75;
                     break;
-            }
-        }
-    }
+            };
+        };
+    };
 
     if (order.toppingsMisc !== null){
         for (let topping of order.toppingMisc()){
             order.price += 1.00;
-        }
-    }
+        };
+    };
 
-    add(order.price)
+    add(order.price);
 }
 
 function add(price){
     $(".price-container h4").remove();
-        let $newprice = ("<h4>".text("COST: $" + price.toFixed(2)));
+    let $newprice = ("<h4>".text("COST: $" + price.toFixed(2)));
     $(".price-container").append($newPrice);
 
-}
-
-
-
-
-
-
-
-
-
-
-
+};
