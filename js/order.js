@@ -60,6 +60,29 @@ function getChanges() {
         : createOrder();
 }
 
+function check(order){
+    for (let choice in order){
+        let picks = order[choice];
+        if (picks == null || picks == [] || picks >= 0.00){
+            continue;
+        } else if (picks == "thin" || picks == "deep"){
+            $("#crust-choice").val(picks).find("option[picks]").attr("selected", true);
+            $("#pizza-size-container").removeClass("hidden");
+        } else if (picks == "sm" || picks == "md" || picks == "lg"){
+            $("#pizza-size").val(picks).find("option[picks]").attr("selected", true);
+            $(".toppings-container").removeClass("hidden");
+            $(".price-reset-section").removeClass("hidden");
+        } else if (picks){
+            for (let pick of picks){
+                if (pick != ""){
+                    $("#" + pick).attr("checked", true);
+                }
+            }
+        } cost(order);
+
+    }
+}
+
 function cost(){
     order.price = 0.00;
     switch (order.crust){
