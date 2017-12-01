@@ -83,7 +83,7 @@ function check(order){
     }
 }
 
-function cost(){
+function cost(order){
     order.price = 0.00;
     switch (order.crust){
         case "thin":
